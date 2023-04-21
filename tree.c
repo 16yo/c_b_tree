@@ -58,7 +58,7 @@ void add_node_by_node(b_tree* t, node* p, int64_t data, SIDE s) {
         return;
     }
     node* v = p;
-    // Add new node to accentor with given id
+    // Add new node to ancestor with given id
     if (s == N_LEFT) {
         if (v->left == NULL) {
             v->left = new_node(t->last_id + 1, data, v);

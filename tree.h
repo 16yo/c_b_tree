@@ -23,7 +23,7 @@ typedef struct node {
     struct node* left;
     // Pointer to right node of b_tree
     struct node* right;
-    // Pointer to node's accentor
+    // Pointer to node's ancestor
     struct node* p;
 } node;
 
@@ -63,10 +63,10 @@ void init_b_tree(b_tree* t, int64_t data);
 // Checks if root pointer is NULL
 int8_t is_empty_b_tree(b_tree* const t);
 
-// Adds node py pointer to its accentor by accentors id
+// Adds node py pointer to its ancestor by ancestors id
 void add_node_by_node(b_tree* t, node* p, int64_t data, SIDE s);
 
-// Adds node py pointer to its accentor by accentors id
+// Adds node py pointer to its ancestor by ancestors id
 void add_node_by_id(b_tree* t, int64_t id, int64_t data, SIDE s);
 
 //      Deletes node by id
